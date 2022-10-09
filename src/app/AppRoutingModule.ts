@@ -3,8 +3,13 @@ import { BasketComponent } from './components/basket/basket.component';
 import { NgModule } from '@angular/core' 
 import { Routes , RouterModule } from '@angular/router'
 import { HomepageComponent } from './components/homepage/homepage.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 const routes:Routes=[
+    {path:'', component:LoginComponent},
+    {path:'login', component:LoginComponent},
+    {path:'register',component:RegisterComponent},
     {path:'home', component: HomepageComponent},
     {path:'books', component: BooksComponent},
     {path:'basket', component: BasketComponent}

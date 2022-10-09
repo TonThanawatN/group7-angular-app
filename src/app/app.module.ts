@@ -12,6 +12,7 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppRoutingModule , routingComponents } from './AppRoutingModule';
+import { RegisterComponent } from './components/register/register.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { AppRoutingModule , routingComponents } from './AppRoutingModule';
     BooksComponent,
     BasketComponent,
     HomepageComponent,
-    routingComponents
+    routingComponents,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
