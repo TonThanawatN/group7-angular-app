@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { BooksService } from 'src/app/services/booksservice.service';
 @Component({
   selector: 'app-books',
   templateUrl: './books.component.html',
@@ -9,10 +9,30 @@ export class BooksComponent implements OnInit {
 
   
 
-  constructor() { }
+  books: any
+
+  constructor(private ps: BooksService) {
+    this.onLoading();
+   }
+
+   
 
   ngOnInit(): void {
-    
+  }
+
+  onLoading(){
+    try {
+      this.ps.getBooks().subscribe(
+        data => {
+          this.books = data;
+        },
+        err =>{
+          console.log(err)
+          
+        });
+    }catch (error) {
+      console.log(error)
+    }
   }
 
 }
